@@ -4,7 +4,7 @@ use leptos::*;
 #[component]
 pub fn NotFound() -> impl IntoView {
     view! { 
-        <div>
+        <div class="text-center">
             <h1>"404 Not Found"</h1>
             <p>"浪人生にはページを見つけることができなかった。"</p>
             <a href="/">"トップページへ"</a>
