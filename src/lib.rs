@@ -1,3 +1,4 @@
+use components::header::HeaderComponent;
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
@@ -27,6 +28,7 @@ pub fn App() -> impl IntoView {
         <Meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <Router>
+            <HeaderComponent />
             <Routes>
                 <Route path="/" view=Home/>
                 <Route path="/*" view=NotFound/>
