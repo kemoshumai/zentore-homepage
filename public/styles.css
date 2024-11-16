@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&display=swap');
+
 * {
+  font-family: "Kosugi", sans-serif;
   background-color: #ffffff;
   color: black;
 }
