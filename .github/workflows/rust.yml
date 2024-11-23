@@ -16,6 +16,7 @@ jobs:
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
+          target: wasm32-unknown-unknown
           toolchain: stable
           override: true
 
