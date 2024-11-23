@@ -17,7 +17,7 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           target: wasm32-unknown-unknown
-          toolchain: stable
+          toolchain: nightly
           override: true
 
       - name: Install cargo-binstall
