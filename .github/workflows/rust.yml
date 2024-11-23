@@ -2,9 +2,13 @@ name: Build and Deploy with Trunk
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
+env:
+  CARGO_TERM_COLOR: always
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,29 +17,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          target: wasm32-unknown-unknown
-          toolchain: nightly
-          override: true
-
-      - name: Install cargo-binstall
-        uses: cargo-bins/cargo-binstall@v1.10.14
-          
-      - name: Install Trunk
-        run: |
-          cargo binstall -y --locked trunk
-          trunk --version
+      - name: Setup Trunk
+        uses: jetli/trunk-action@v0.5.0
+        
+      - name: Rustup Wasm32 Target
+        run: rustup target add wasm32-unknown-unknown
 
       - name: Build with Trunk
-        run: trunk build --release --public-url /zentore-homepage
+        run: trunk build --release --public-url "/zentore-homepage"
 
       - name: Upload dist as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/
+          path: dist
         
   deploy:
     needs: build
