@@ -13,9 +13,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
       - name: Install Trunk
         run: |
-          curl -fsSL https://trunkrs.dev/install.sh | bash
+          cargo install --locked trunk
           trunk --version
 
       - name: Build with Trunk
