@@ -19,9 +19,12 @@ jobs:
           toolchain: stable
           override: true
 
+      - name: Install cargo-binstall
+        uses: cargo-bins/cargo-binstall@v1.10.14
+          
       - name: Install Trunk
         run: |
-          cargo install --locked trunk
+          cargo binstall -y --locked trunk
           trunk --version
 
       - name: Build with Trunk
