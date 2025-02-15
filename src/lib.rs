@@ -26,7 +26,7 @@ pub fn App() -> impl IntoView {
         <Router>
             <HeaderComponent />
             <Routes>
-                <Route path="/" view=Home/>
+                <Route path="/zentore-homepage" view=Home/>
                 <Route path="/*" view=NotFound/>
             </Routes>
         </Router>
