@@ -1,79 +1,48 @@
-<picture>
-    <source srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_Solid_White.svg" media="(prefers-color-scheme: dark)">
-    <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo">
-</picture>
-
-# Leptos Client-Side Rendered (CSR) App Starter Template
-
-This is a template for use with the [Leptos][Leptos] web framework using the [Trunk][Trunk] tool to compile and serve your app in development.
-
-## Creating your repo from the template
-
-This template requires you to have `cargo-generate` installed. You can install it with
+# Astro Starter Kit: Basics
 
 ```sh
-cargo install cargo-generate
+npm create astro@latest -- --template basics
 ```
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-To set up your project with this template, run
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-```sh
-cargo generate --git https://github.com/leptos-community/start-csr
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-to generate your new project, then
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-```sh
-cd zentore-homepage
-```
+## 🧞 Commands
 
-to go to your newly created project.
+All commands are run from the root of the project, from a terminal:
 
-By default, this template uses Rust `nightly` and requires that you've installed the `wasm` compilation target for your toolchain.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 👀 Want to learn more?
 
-Sass and Tailwind are also supported by the Trunk build tool, but are optional additions: [see here for more info on how to set those up with Trunk][Trunk-instructions].
-
-
-If you don't have Rust nightly, you can install it with
-```sh
-rustup toolchain install nightly --allow-downgrade
-```
-
-You can add the `wasm` compilation target to rust using
-```sh
-rustup target add wasm32-unknown-unknown
-```
-
-
-## Developing your Leptos CSR project
-
-To develop your Leptos CSR project, running
-
-```sh
-trunk serve --port 3000 --open
-```
-
-will open your app in your default browser at `http://localhost:3000`.
-
-
-## Deploying your Leptos CSR project
-
-To build a Leptos CSR app for release, use the command
-
-```sh
-trunk build --release
-```
-
-This will output the files necessary to run your app into the `dist` folder; you can then use any static site host to serve these files.
-
-For further information about hosting Leptos CSR apps, please refer to [the Leptos Book chapter on deployment available here][deploy-csr].
-
-
-[Leptos]: https://github.com/leptos-rs/leptos
-
-[Trunk]: https://github.com/trunk-rs/trunk
-[Trunk-instructions]: https://trunkrs.dev/assets/
-
-[deploy-csr]: https://book.leptos.dev/deployment/csr.html
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
