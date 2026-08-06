@@ -8,6 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "https://kemoshumai.github.io",
-  base: "zentore-homepage"
+  site: "https://zentore.kemoshumai.com"
 });
